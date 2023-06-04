@@ -1,4 +1,5 @@
 <template>
+  <SearchInput />
   <ChipButton :chip="'News'" :isSelected="true" />
   <div v-for="(video, index) in cards" :key="index">
     <VideoCard v-bind="video" />
@@ -10,12 +11,14 @@
 <script>
 import ChipButton from "./components/ChipButton.vue";
 import VideoCard from "./components/VideoCard.vue";
+import SearchInput from "./components/SearchComponent.vue";
 
 export default {
   name: "App",
   components: {
     ChipButton,
     VideoCard,
+    SearchInput,
   },
   data() {
     return {
