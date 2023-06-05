@@ -14,6 +14,7 @@ export function getChipData() {
     "Melodies",
     "Train",
     "Politics",
+    "Football",
   ];
   return chipList.map((i, index) => {
     return {
