@@ -5,7 +5,11 @@
       <div class="dashboard__choices">
         <div class="dashboard__chip-list">
           <div v-for="(chip, index) in chipList" :key="index">
-            <ChipButton :chip="chip.value" :isSelected="chip.isActive" />
+            <ChipButton
+              :chip="chip.value"
+              @click="changeActive(chip.value)"
+              :isSelected="chip.isActive"
+            />
           </div>
         </div>
         <div class="dashboard__choices-next">
@@ -59,6 +63,13 @@ export default {
       chipList: getChipData(),
       cards: getVideoData(),
     };
+  },
+  methods: {
+    changeActive(value) {
+      this.chipList.forEach((i) => {
+        i.isActive = value == i.value;
+      });
+    },
   },
 };
 </script>

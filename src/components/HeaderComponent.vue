@@ -108,6 +108,9 @@ export default {
       &.yt-logo {
         width: 90px;
         height: 40px;
+        @media (max-width: 500px) {
+          display: none;
+        }
       }
     }
     svg.menu-icon {
@@ -126,6 +129,7 @@ export default {
       fill: #ffffff;
       border-radius: 50%;
       background: #212121;
+      cursor: pointer;
     }
   }
 }
