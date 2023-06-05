@@ -93,6 +93,9 @@ p {
   height: 100vh;
   display: grid;
   grid-template-columns: max-content auto;
+  @media (max-width: 500px) {
+    grid-template-columns: auto;
+  }
   overflow-x: hidden;
   .main-content {
     overflow-x: hidden;
@@ -100,6 +103,9 @@ p {
   .side-bar {
     height: 100%;
     width: 94px;
+    @media (max-width: 500px) {
+      display: none;
+    }
   }
   &__chip-list {
     display: flex;
@@ -139,6 +145,14 @@ p {
     grid-row-gap: 32px;
     @include margin(32px 28px 24px 0);
     grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+      @include margin(16px 14px 12px 14px);
+    }
+    @media (max-width: 500px) {
+      grid-template-columns: repeat(1, 1fr);
+      @include margin(16px 14px 12px 14px);
+    }
   }
 }
 </style>
