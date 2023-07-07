@@ -15,6 +15,20 @@ export function getChipData() {
     "Train",
     "Politics",
     "Football",
+    "Tamil Cinema",
+    "News",
+    "Mixes",
+    "Music",
+    "England cricket team",
+    "Wickets",
+    "Live",
+    "A. R. Rahman",
+    "Driving",
+    "Stock Markets",
+    "Melodies",
+    "Train",
+    "Politics",
+    "Football",
   ];
   return chipList.map((i, index) => {
     return {

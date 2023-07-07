@@ -110,6 +110,10 @@ p {
   overflow-x: hidden;
   .main-content {
     overflow-x: hidden;
+    &::-webkit-scrollbar {
+      width: 0; /* Remove scrollbar space */
+      background: transparent; /* Optional: just make scrollbar invisible */
+    }
   }
   .side-bar {
     height: 100%;
